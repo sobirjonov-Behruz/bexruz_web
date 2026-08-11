@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xonalar — BEXRUZ.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <input type="checkbox" id="sidebarToggle" class="sidebar-toggle-checkbox">
+        <label for="sidebarToggle" class="sidebar-overlay"></label>
+
+        <!-- ===================== SIDEBAR ===================== -->
+        <aside class="admin-sidebar">
+            <a href="index.html" class="brand">BEXRUZ<span class="text-gold">.Admin</span></a>
+
+            <nav class="admin-nav">
+                <a href="index.html"><i class="bi bi-speedometer2"></i> Boshqaruv paneli</a>
+                <a href="rooms.html" class="active"><i class="bi bi-door-open"></i> Xonalar</a>
+                <a href="bookings.html"><i class="bi bi-calendar2-week"></i> Bandlovlar</a>
+                <a href="clients.html"><i class="bi bi-people"></i> Mehmonlar</a>
+                <a href="settings.html"><i class="bi bi-gear"></i> Sozlamalar</a>
+
+                <div class="divider"></div>
+
+                <a href="../index.html"><i class="bi bi-box-arrow-left"></i> Saytga qaytish</a>
+            </nav>
+        </aside>
+
+        <!-- ===================== MAIN ===================== -->
+        <div class="admin-main">
+
+            <header class="admin-topbar">
+                <div class="d-flex align-items-center gap-3">
+                    <label for="sidebarToggle" class="btn btn-outline-secondary d-lg-none sidebar-toggle-label mb-0">
+                        <i class="bi bi-list"></i>
+                    </label>
+                    <div>
+                        <h1>Xonalar</h1>
+                        <div class="date">Jami 12 ta xona — 5 turkumda</div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-gold rounded-pill px-4" disabled>
+                    <i class="bi bi-plus-lg me-1"></i>Xona qo'shish
+                </button>
+            </header>
+
+            <div class="admin-content">
+
+                <!-- ===================== STANDART ===================== -->
+                <div class="room-type-heading">
+                    <h3>Standart xonalar</h3>
+                    <span class="count">$45 / kecha &middot; 3 ta xona</span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">101</span>
+                                <span class="room-price">$45</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 2 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 22m²</span>
+                            </div>
+                            <span class="badge-status badge-booked">Band</span>
+                            <div class="room-guest">Aziz Karimov &middot; 09.08 – 13.08</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">102</span>
+                                <span class="room-price">$45</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 2 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 22m²</span>
+                            </div>
+                            <span class="badge-status badge-available">Bo'sh</span>
+                            <div class="room-guest">Hozircha mehmon yo'q</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">303</span>
+                                <span class="room-price">$45</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 2 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 22m²</span>
+                            </div>
+                            <span class="badge-status badge-maintenance">Ta'mirlanmoqda</span>
+                            <div class="room-guest">Tugash sanasi: 16.08.2026</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="add-room-card">
+                            <i class="bi bi-plus-circle fs-2"></i>
+                            <span>Yangi standart xona</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== DELUX ===================== -->
+                <div class="room-type-heading">
+                    <h3>Delux xonalar</h3>
+                    <span class="count">$70 / kecha &middot; 3 ta xona</span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">103</span>
+                                <span class="room-price">$70</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 2 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 30m²</span>
+                            </div>
+                            <span class="badge-status badge-booked">Band</span>
+                            <div class="room-guest">Malika Yusupova &middot; 10.08 – 15.08</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">104</span>
+                                <span class="room-price">$70</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 2 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 30m²</span>
+                            </div>
+                            <span class="badge-status badge-available">Bo'sh</span>
+                            <div class="room-guest">Hozircha mehmon yo'q</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">304</span>
+                                <span class="room-price">$70</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 2 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 30m²</span>
+                            </div>
+                            <span class="badge-status badge-booked">Band</span>
+                            <div class="room-guest">Olga Petrova &middot; 09.08 – 16.08</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="add-room-card">
+                            <i class="bi bi-plus-circle fs-2"></i>
+                            <span>Yangi delux xona</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== SUITE ===================== -->
+                <div class="room-type-heading">
+                    <h3>Suite xonalar</h3>
+                    <span class="count">$120 / kecha &middot; 2 ta xona</span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">201</span>
+                                <span class="room-price">$120</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 3 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 45m²</span>
+                            </div>
+                            <span class="badge-status badge-booked">Band</span>
+                            <div class="room-guest">Jasur Toshpo'latov &middot; 05.08 – 12.08</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">202</span>
+                                <span class="room-price">$120</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 3 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 45m²</span>
+                            </div>
+                            <span class="badge-status badge-available">Bo'sh</span>
+                            <div class="room-guest">Hozircha mehmon yo'q</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="add-room-card">
+                            <i class="bi bi-plus-circle fs-2"></i>
+                            <span>Yangi suite xona</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== VILLA ===================== -->
+                <div class="room-type-heading">
+                    <h3>Villalar</h3>
+                    <span class="count">$250 / kecha &middot; 2 ta xona</span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">203</span>
+                                <span class="room-price">$250</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 5 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 214m²</span>
+                            </div>
+                            <span class="badge-status badge-booked">Band</span>
+                            <div class="room-guest">Nodira Rashidova &middot; 11.08 – 18.08</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">204</span>
+                                <span class="room-price">$250</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 5 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 214m²</span>
+                            </div>
+                            <span class="badge-status badge-available">Bo'sh</span>
+                            <div class="room-guest">Hozircha mehmon yo'q</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="add-room-card">
+                            <i class="bi bi-plus-circle fs-2"></i>
+                            <span>Yangi villa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===================== PREMIUM SUITE ===================== -->
+                <div class="room-type-heading">
+                    <h3>Premium Suite</h3>
+                    <span class="count">$180 / kecha &middot; 2 ta xona</span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">301</span>
+                                <span class="room-price">$180</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 4 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 60m²</span>
+                            </div>
+                            <span class="badge-status badge-booked">Band</span>
+                            <div class="room-guest">John Smith &middot; 08.08 – 14.08</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="room-card">
+                            <div class="room-card-top">
+                                <span class="room-no">302</span>
+                                <span class="room-price">$180</span>
+                            </div>
+                            <div class="room-meta">
+                                <span><i class="bi bi-people"></i> 4 kishi</span>
+                                <span><i class="bi bi-arrows-fullscreen"></i> 60m²</span>
+                            </div>
+                            <span class="badge-status badge-available">Bo'sh</span>
+                            <div class="room-guest">Hozircha mehmon yo'q</div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="add-room-card">
+                            <i class="bi bi-plus-circle fs-2"></i>
+                            <span>Yangi premium suite</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

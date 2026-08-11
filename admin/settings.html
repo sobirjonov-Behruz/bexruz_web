@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sozlamalar — BEXRUZ.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <input type="checkbox" id="sidebarToggle" class="sidebar-toggle-checkbox">
+        <label for="sidebarToggle" class="sidebar-overlay"></label>
+
+        <!-- ===================== SIDEBAR ===================== -->
+        <aside class="admin-sidebar">
+            <a href="index.html" class="brand">BEXRUZ<span class="text-gold">.Admin</span></a>
+
+            <nav class="admin-nav">
+                <a href="index.html"><i class="bi bi-speedometer2"></i> Boshqaruv paneli</a>
+                <a href="rooms.html"><i class="bi bi-door-open"></i> Xonalar</a>
+                <a href="bookings.html"><i class="bi bi-calendar2-week"></i> Bandlovlar</a>
+                <a href="clients.html"><i class="bi bi-people"></i> Mehmonlar</a>
+                <a href="settings.html" class="active"><i class="bi bi-gear"></i> Sozlamalar</a>
+
+                <div class="divider"></div>
+
+                <a href="../index.html"><i class="bi bi-box-arrow-left"></i> Saytga qaytish</a>
+            </nav>
+        </aside>
+
+        <!-- ===================== MAIN ===================== -->
+        <div class="admin-main">
+
+            <header class="admin-topbar">
+                <div class="d-flex align-items-center gap-3">
+                    <label for="sidebarToggle" class="btn btn-outline-secondary d-lg-none sidebar-toggle-label mb-0">
+                        <i class="bi bi-list"></i>
+                    </label>
+                    <div>
+                        <h1>Sozlamalar</h1>
+                        <div class="date">Mehmonxona va tizim sozlamalari</div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-gold rounded-pill px-4" disabled>
+                    <i class="bi bi-check-lg me-1"></i>Saqlash
+                </button>
+            </header>
+
+            <div class="admin-content">
+                <div class="row g-3">
+
+                    <div class="col-12 col-lg-7">
+                        <div class="panel-card">
+
+                            <div class="settings-section">
+                                <h3>Mehmonxona ma'lumotlari</h3>
+                                <p class="hint">Bu ma'lumotlar sayt va hisobotlarda ko'rsatiladi.</p>
+
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label class="form-label small fw-bold">Mehmonxona nomi</label>
+                                        <input type="text" class="form-control" value="BEXRUZ.com Hotel">
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label small fw-bold">Manzil</label>
+                                        <input type="text" class="form-control" value="Toshkent, O'zbekiston">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label small fw-bold">Telefon</label>
+                                        <input type="text" class="form-control" value="+998 90 123 45 67">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label small fw-bold">Email</label>
+                                        <input type="email" class="form-control" value="info@bexruz.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <h3>Bron qilish qoidalari</h3>
+                                <p class="hint">Standart check-in / check-out vaqti va valyuta.</p>
+
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <label class="form-label small fw-bold">Check-in vaqti</label>
+                                        <input type="time" class="form-control" value="14:00">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label small fw-bold">Check-out vaqti</label>
+                                        <input type="time" class="form-control" value="12:00">
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label small fw-bold">Valyuta</label>
+                                        <select class="form-select">
+                                            <option selected>USD ($)</option>
+                                            <option>UZS (so'm)</option>
+                                            <option>EUR (€)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="form-label small fw-bold">Bekor qilish muddati</label>
+                                        <select class="form-select">
+                                            <option>24 soat oldin</option>
+                                            <option selected>48 soat oldin</option>
+                                            <option>72 soat oldin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="settings-section">
+                                <h3>Bildirishnomalar</h3>
+                                <p class="hint">Qaysi hodisalar haqida xabar olishni tanlang.</p>
+
+                                <div class="form-switch-row">
+                                    <div>
+                                        <div class="label">Yangi bandlov</div>
+                                        <div class="desc">Yangi bron qilinganda xabar berish</div>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                                <div class="form-switch-row">
+                                    <div>
+                                        <div class="label">Bugungi check-in / check-out</div>
+                                        <div class="desc">Har kuni ertalab eslatma</div>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" checked>
+                                    </div>
+                                </div>
+                                <div class="form-switch-row">
+                                    <div>
+                                        <div class="label">Xona ta'mirlash holati</div>
+                                        <div class="desc">Xona ta'mirdan chiqqanda xabar berish</div>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <div class="panel-card mb-3">
+                            <h2>Administrator</h2>
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <i class="bi bi-person-circle" style="font-size: 3rem; color:#ccc;"></i>
+                                <div>
+                                    <div class="fw-bold">Bexruz Aliyev</div>
+                                    <div class="text-secondary small">info@bexruz.com</div>
+                                </div>
+                            </div>
+                            <label class="form-label small fw-bold">Ism</label>
+                            <input type="text" class="form-control mb-3" value="Bexruz Aliyev">
+                            <label class="form-label small fw-bold">Parolni yangilash</label>
+                            <input type="password" class="form-control" placeholder="Yangi parol">
+                        </div>
+
+                        <div class="panel-card">
+                            <h2>Xona turlari va narxlari</h2>
+                            <div class="table-responsive">
+                                <table class="table rooms-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Turi</th>
+                                            <th>Narxi / kecha</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Standart</td>
+                                            <td class="room-price">$45</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delux</td>
+                                            <td class="room-price">$70</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Suite</td>
+                                            <td class="room-price">$120</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Premium Suite</td>
+                                            <td class="room-price">$180</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Villa</td>
+                                            <td class="room-price">$250</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

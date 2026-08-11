@@ -1,0 +1,561 @@
+/* =========================================================
+   BEXRUZ.com — Admin panel
+   ========================================================= */
+
+:root {
+    --gold: #C49C74;
+    --gold-dark: #a97f57;
+    --dark: #111111;
+    --dark-soft: #1c1c1c;
+    --sidebar-w: 260px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f5f7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================================
+   Layout
+   ========================================================= */
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    background: var(--dark);
+    color: #fff;
+    padding: 24px 18px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.admin-sidebar .brand {
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    display: block;
+    color: #fff;
+}
+
+.admin-sidebar .brand .text-gold {
+    color: var(--gold);
+}
+
+.admin-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cfcfcf;
+    padding: 11px 14px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.admin-nav a:hover {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+}
+
+.admin-nav a.active {
+    background: var(--gold);
+    color: #111;
+}
+
+.admin-nav .divider {
+    height: 1px;
+    background: rgba(255, 255, 255, .1);
+    margin: 16px 0;
+}
+
+.admin-main {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.admin-topbar {
+    background: #fff;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 16px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.admin-topbar h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.admin-topbar .date {
+    color: #888;
+    font-size: .9rem;
+}
+
+.admin-content {
+    padding: 28px;
+}
+
+/* =========================================================
+   Stat cards
+   ========================================================= */
+
+.stat-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 100%;
+    border-left: 5px solid var(--gold);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+}
+
+.stat-card .icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.stat-card .value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.stat-card .label {
+    color: #888;
+    font-size: .85rem;
+}
+
+.icon-gold { background: var(--gold); }
+.icon-red { background: #e15759; }
+.icon-green { background: #4caf50; }
+.icon-blue { background: #4a7dff; }
+
+/* =========================================================
+   Rooms table card
+   ========================================================= */
+
+.panel-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+}
+
+.panel-card h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 18px;
+    font-size: .85rem;
+    color: #666;
+}
+
+.legend .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.dot-available { background: #4caf50; }
+.dot-booked { background: #e15759; }
+.dot-maintenance { background: #999; }
+
+.rooms-table th {
+    color: #888;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    border-bottom: 2px solid #eee;
+    white-space: nowrap;
+}
+
+.rooms-table td {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.rooms-table tbody tr:hover {
+    background: #fbfaf7;
+}
+
+.badge-status {
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: .78rem;
+}
+
+.badge-available {
+    background: rgba(76, 175, 80, .12);
+    color: #2e7d32;
+}
+
+.badge-booked {
+    background: rgba(225, 87, 89, .12);
+    color: #c62828;
+}
+
+.badge-maintenance {
+    background: rgba(153, 153, 153, .15);
+    color: #666;
+}
+
+.room-price {
+    font-weight: 800;
+    color: var(--gold-dark);
+}
+
+/* =========================================================
+   Booking calendar / timetable (Gantt-style)
+   ========================================================= */
+
+.calendar-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.calendar-toolbar .month-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.calendar-toolbar .month-nav .btn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+}
+
+.calendar-scroll {
+    overflow-x: auto;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.calendar-table {
+    border-collapse: collapse;
+    font-size: .78rem;
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 0;
+}
+
+.calendar-table .room-col {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, .06);
+    text-align: left;
+    padding: 10px 14px;
+    min-width: 160px;
+}
+
+.calendar-table thead .room-col {
+    z-index: 3;
+    background: #fafafa;
+}
+
+.calendar-table .room-label {
+    font-weight: 800;
+    font-size: .85rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-table .room-label span {
+    font-weight: 400;
+    color: #888;
+    font-size: .72rem;
+}
+
+.calendar-table .cal-day {
+    width: 34px;
+    min-width: 34px;
+    padding: 6px 0;
+    color: #888;
+    font-weight: 700;
+    background: #fafafa;
+}
+
+.calendar-table .cal-weekday-row .cal-day {
+    color: #b3b3b3;
+    font-weight: 600;
+    padding-top: 8px;
+    padding-bottom: 2px;
+    border-bottom: none;
+}
+
+.calendar-table .cal-daynum-row .cal-day {
+    padding-top: 2px;
+}
+
+.calendar-table .cal-day.weekend {
+    background: #f1ede7;
+}
+
+.calendar-table .cal-day.today {
+    background: var(--gold);
+    color: #111;
+}
+
+.calendar-table td.cell-available {
+    background: rgba(76, 175, 80, .08);
+    height: 46px;
+}
+
+.calendar-table td.cell-available.weekend {
+    background: rgba(76, 175, 80, .16);
+}
+
+.calendar-table td.cell-available.today {
+    box-shadow: inset 0 0 0 2px var(--gold);
+}
+
+.calendar-table td.cell-booked,
+.calendar-table td.cell-maintenance {
+    color: #fff;
+    font-weight: 700;
+    font-size: .72rem;
+    overflow: hidden;
+}
+
+.calendar-table td.cell-booked {
+    background: linear-gradient(180deg, #e2696b, #c62828);
+}
+
+.calendar-table td.cell-maintenance {
+    background: repeating-linear-gradient(45deg, #9a9a9a, #9a9a9a 6px, #888 6px, #888 12px);
+}
+
+.calendar-table td.cell-booked span,
+.calendar-table td.cell-maintenance span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
+}
+
+/* =========================================================
+   Room cards (rooms.html)
+   ========================================================= */
+
+.room-type-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 32px 0 16px;
+}
+
+.room-type-heading:first-child {
+    margin-top: 0;
+}
+
+.room-type-heading h3 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.room-type-heading .count {
+    color: #999;
+    font-size: .85rem;
+}
+
+.room-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+    height: 100%;
+    border-top: 4px solid var(--gold);
+}
+
+.room-card .room-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.room-card .room-no {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.room-card .room-price {
+    color: var(--gold-dark);
+    font-weight: 800;
+}
+
+.room-card .room-meta {
+    color: #888;
+    font-size: .85rem;
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.room-card .room-guest {
+    font-size: .85rem;
+    color: #555;
+    border-top: 1px dashed #eee;
+    padding-top: 10px;
+    margin-top: 4px;
+}
+
+.add-room-card {
+    border: 2px dashed #ddd;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    min-height: 150px;
+    color: #aaa;
+    font-weight: 700;
+}
+
+/* =========================================================
+   Settings page (settings.html)
+   ========================================================= */
+
+.settings-section {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.settings-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.settings-section h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.settings-section .hint {
+    color: #999;
+    font-size: .82rem;
+    margin-bottom: 16px;
+}
+
+.form-switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #f2f2f2;
+}
+
+.form-switch-row:first-of-type {
+    border-top: none;
+}
+
+.form-switch-row .label {
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.form-switch-row .desc {
+    color: #999;
+    font-size: .8rem;
+}
+
+.form-switch-row .form-check-input {
+    width: 2.6em;
+    height: 1.4em;
+}
+
+.sidebar-toggle-checkbox {
+    display: none;
+}
+
+.sidebar-overlay {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .admin-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        z-index: 1050;
+        transition: transform .25s ease;
+    }
+
+    /* pure-CSS mobile sidebar toggle (checkbox hack, no JS) */
+    .sidebar-toggle-checkbox:checked ~ .admin-sidebar {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle-checkbox:checked ~ .sidebar-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, .45);
+        z-index: 1040;
+    }
+
+    .sidebar-toggle-label {
+        cursor: pointer;
+    }
+}

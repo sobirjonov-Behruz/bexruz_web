@@ -1,222 +1,369 @@
+/* =========================================================
+   BEXRUZ.com — Hotel landing page
+   ========================================================= */
+
+:root {
+    --gold: #C49C74;
+    --gold-dark: #a97f57;
+    --dark: #111111;
+    --dark-soft: #1c1c1c;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    height: 1300vh;
+html {
+    scroll-behavior: smooth;
 }
-
-#home {
-    width: 100%;
-    height: 100vh;
-    background: url(./horel.png) no-repeat center / cover;
-
-
-}
-
-
-.div {
-    width: 103%;
-    height: 112px;
-    background-color: rgba(0, 0, 0, 0.586);
-    border-radius: 20px;
-    margin-left: -285px;
-    margin-top: -180px;
-    display: flex;
-}
-
-.buttom {
-    background-color: #C49C74;
-    border: none;
-    color: black;
-    width: 200px;
-    height: 48px;
-    margin-left: -120px;
-    border-radius: 10px;
-    margin-top: 30px;
-}
-
-
-.input-box {
-    position: relative;
-    width: 300px;
-}
-
-.input-box input {
-    width: 100%;
-    padding: 12px 45px 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.input-box i {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: gray;
-}
-
-
-.input-box i {
-    left: 15px;
-    right: auto;
-}
-
-.input-box input {
-    padding-left: 45px;
-}
-
-
-
-
-
 
 body {
     background: #f7f7f7;
     font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
 }
 
-.section {
+a {
+    text-decoration: none;
+}
+
+.text-gold {
+    color: var(--gold) !important;
+}
+
+.bg-gold {
+    background-color: var(--gold) !important;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    border: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    transition: background-color .2s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--gold-dark);
+    color: #fff;
+}
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+
+.custom-navbar {
+    background: rgba(17, 17, 17, 0.55);
+    backdrop-filter: blur(8px);
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: background-color .2s ease;
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.4rem;
+}
+
+.custom-navbar .nav-link {
+    color: #eee;
+    font-weight: 600;
+    margin: 0 6px;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+    color: var(--gold);
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: url(./horel.png) no-repeat center / cover;
+    display: flex;
+    align-items: center;
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .8));
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero .lead {
+    color: #e6e6e6;
+}
+
+.search-card {
+    background: rgba(0, 0, 0, .65);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+}
+
+.search-card label {
+    color: #cfcfcf;
+}
+
+.search-card .form-control,
+.search-card .input-group-text {
+    background-color: var(--dark-soft);
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.search-card .form-control::placeholder {
+    color: #9a9a9a;
+}
+
+.search-card .form-control:focus {
+    background-color: var(--dark-soft);
+    color: #fff;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 .2rem rgba(196, 156, 116, .25);
+}
+
+.search-card .btn-gold {
+    height: 46px;
+}
+
+/* =========================================================
+   Feature strip ("We provide a variety...")
+   ========================================================= */
+
+.feature-strip {
+    background: var(--dark);
+    color: #fff;
     padding: 60px 0;
 }
 
-.title {
+.feature-strip .divider {
+    width: 5px;
+    min-height: 90px;
+    background-color: var(--gold);
+    border-radius: 4px;
+}
+
+.feature-strip p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   Hotels section
+   ========================================================= */
+
+.section-title {
     text-align: center;
-    font-size: 45px;
-    font-weight: bold;
-    margin-bottom: 50px;
-    margin-top: 70px;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    margin-bottom: 45px;
 }
 
-.slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
+.hotel-card {
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+    transition: transform .25s ease, box-shadow .25s ease;
+    height: 100%;
 }
 
-.arrow {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #d7d2cb;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.hotel-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .14);
 }
 
-.card-hotel {
-    width: 260px;
-}
-
-.card-img {
+.hotel-card .card-img {
     position: relative;
 }
 
-.card-img img {
+.hotel-card .card-img img {
     width: 100%;
-    height: 340px;
+    height: 240px;
     object-fit: cover;
-    border-radius: 22px;
+    display: block;
 }
 
-.rating {
+.hotel-card .rating {
     position: absolute;
-    left: 15px;
-    top: 15px;
-    background: rgba(255, 255, 255, .9);
+    left: 12px;
+    top: 12px;
+    background: rgba(255, 255, 255, .92);
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 13px;
+    font-weight: 600;
 }
 
-.like {
+.hotel-card .like {
     position: absolute;
-    right: 15px;
-    top: 15px;
-    color: white;
-    font-size: 22px;
+    right: 12px;
+    top: 12px;
+    color: #fff;
+    font-size: 20px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .5));
 }
 
-.info {
-    margin-top: 15px;
+.hotel-card .info {
+    padding: 16px;
 }
 
-.price {
-    color: #d18800;
-    font-size: 22px;
-    font-weight: bold;
+.hotel-card .price {
+    color: var(--gold-dark);
+    font-size: 1.25rem;
+    font-weight: 800;
 }
 
-.small {
-    color: gray;
-    font-size: 1 4px;
+.hotel-card .small-muted {
+    color: #888;
+    font-size: 13px;
 }
 
-
-
-
-
-
-
-.details {
+.hotel-card .details {
     display: flex;
-    gap: 18px;
-    color: gray;
+    gap: 16px;
+    color: #777;
     font-size: 14px;
     margin-top: 10px;
 }
 
-.see-blak {
-    width: 100%;
-    height: 400px;
-    margin-top: 10px;
-    background-color: black;
-    display: flex;
-    gap: 218px;
-    color: white;
-    padding: 150px 460px;
+/* =========================================================
+   CTA dark section ("See it all")
+   ========================================================= */
+
+.cta-dark {
+    background-color: var(--dark);
+    color: #fff;
+    padding: 70px 0;
 }
 
-.see-blak2 {
-    width: 100%;
-    height: 555px;
-    margin-top: -290px;
-    display: flex;
-    gap: 50px;
-    color: white;
-    padding: 150px 300px;
-    gap: 200px;
+.cta-dark h2 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 18px;
 }
 
-.browse {
-    width: 100%;
+.cta-dark p {
+    color: #c9c9c9;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   Browse by property type
+   ========================================================= */
+
+#browse {
     background-color: whitesmoke;
+    padding: 80px 0;
 }
 
-.bro {
-    margin-left: 150px;
+#browse .badge-years {
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .08);
+    color: #9b9a9a;
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 10px 24px;
+    border-radius: 12px;
+    margin-top: 24px;
 }
 
-.img-img {
-    margin-left: 200px;
-    display: flex;
-    gap: 20px;
+#browse p.lead-text {
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.7;
 }
 
-.img {
-    width: 300px;
-    height: 70vh;
-    margin-top: 20px;
+.property-type {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 340px;
+    display: block;
+}
+
+.property-type img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    transition: transform .35s ease;
 }
 
-.h3 {
-margin-top: 70px;
+.property-type:hover img {
+    transform: scale(1.08);
+}
+
+.property-type .caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .75));
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+footer.site-footer {
+    background-color: #0d0d0d;
+    color: #cfcfcf;
+    padding-top: 60px;
+}
+
+footer.site-footer h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+footer.site-footer a {
+    color: #cfcfcf;
+}
+
+footer.site-footer a:hover {
+    color: var(--gold);
+}
+
+footer.site-footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    margin-right: 8px;
+}
+
+footer.site-footer .social-icons a:hover {
+    background-color: var(--gold);
+    color: #111;
+}
+
+footer.site-footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    margin-top: 40px;
+    padding: 18px 0;
+    font-size: 14px;
+    color: #999;
 }

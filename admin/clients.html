@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mehmonlar — BEXRUZ.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <input type="checkbox" id="sidebarToggle" class="sidebar-toggle-checkbox">
+        <label for="sidebarToggle" class="sidebar-overlay"></label>
+
+        <!-- ===================== SIDEBAR ===================== -->
+        <aside class="admin-sidebar">
+            <a href="index.html" class="brand">BEXRUZ<span class="text-gold">.Admin</span></a>
+
+            <nav class="admin-nav">
+                <a href="index.html"><i class="bi bi-speedometer2"></i> Boshqaruv paneli</a>
+                <a href="rooms.html"><i class="bi bi-door-open"></i> Xonalar</a>
+                <a href="bookings.html"><i class="bi bi-calendar2-week"></i> Bandlovlar</a>
+                <a href="clients.html" class="active"><i class="bi bi-people"></i> Mehmonlar</a>
+                <a href="settings.html"><i class="bi bi-gear"></i> Sozlamalar</a>
+
+                <div class="divider"></div>
+
+                <a href="../index.html"><i class="bi bi-box-arrow-left"></i> Saytga qaytish</a>
+            </nav>
+        </aside>
+
+        <!-- ===================== MAIN ===================== -->
+        <div class="admin-main">
+
+            <header class="admin-topbar">
+                <div class="d-flex align-items-center gap-3">
+                    <label for="sidebarToggle" class="btn btn-outline-secondary d-lg-none sidebar-toggle-label mb-0">
+                        <i class="bi bi-list"></i>
+                    </label>
+                    <div>
+                        <h1>Mehmonlar</h1>
+                        <div class="date">Jami 8 ta mehmon</div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-gold rounded-pill px-4" disabled>
+                    <i class="bi bi-person-plus me-1"></i>Mehmon qo'shish
+                </button>
+            </header>
+
+            <div class="admin-content">
+
+                <div class="panel-card">
+                    <h2>Mehmonlar ro'yxati</h2>
+                    <div class="table-responsive">
+                        <table class="table rooms-table">
+                            <thead>
+                                <tr>
+                                    <th>Mehmon</th>
+                                    <th>Telefon</th>
+                                    <th>Email</th>
+                                    <th>Xona</th>
+                                    <th>Holati</th>
+                                    <th>Tashriflar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Aziz Karimov</td>
+                                    <td>+998 90 111 22 33</td>
+                                    <td>aziz.karimov@mail.com</td>
+                                    <td>101</td>
+                                    <td><span class="badge-status badge-booked">Turibdi</span></td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Malika Yusupova</td>
+                                    <td>+998 91 222 33 44</td>
+                                    <td>malika.y@mail.com</td>
+                                    <td>103</td>
+                                    <td><span class="badge-status badge-booked">Turibdi</span></td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Jasur Toshpo'latov</td>
+                                    <td>+998 93 333 44 55</td>
+                                    <td>jasur.t@mail.com</td>
+                                    <td>201</td>
+                                    <td><span class="badge-status badge-booked">Turibdi</span></td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Nodira Rashidova</td>
+                                    <td>+998 94 444 55 66</td>
+                                    <td>nodira.r@mail.com</td>
+                                    <td>203</td>
+                                    <td><span class="badge-status badge-booked">Turibdi</span></td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">John Smith</td>
+                                    <td>+1 202 555 0148</td>
+                                    <td>john.smith@mail.com</td>
+                                    <td>301</td>
+                                    <td><span class="badge-status badge-booked">Turibdi</span></td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Olga Petrova</td>
+                                    <td>+998 95 555 66 77</td>
+                                    <td>olga.petrova@mail.com</td>
+                                    <td>304</td>
+                                    <td><span class="badge-status badge-booked">Turibdi</span></td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Kamola Sattorova</td>
+                                    <td>+998 97 666 77 88</td>
+                                    <td>kamola.s@mail.com</td>
+                                    <td>—</td>
+                                    <td><span class="badge-status badge-maintenance">Avvalgi mehmon</span></td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Diyor Nazarov</td>
+                                    <td>+998 99 777 88 99</td>
+                                    <td>diyor.nazarov@mail.com</td>
+                                    <td>—</td>
+                                    <td><span class="badge-status badge-maintenance">Avvalgi mehmon</span></td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

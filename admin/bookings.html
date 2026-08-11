@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bandlovlar kalendari — BEXRUZ.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="admin-wrapper">
+
+        <input type="checkbox" id="sidebarToggle" class="sidebar-toggle-checkbox">
+        <label for="sidebarToggle" class="sidebar-overlay"></label>
+
+        <!-- ===================== SIDEBAR ===================== -->
+        <aside class="admin-sidebar">
+            <a href="index.html" class="brand">BEXRUZ<span class="text-gold">.Admin</span></a>
+
+            <nav class="admin-nav">
+                <a href="index.html"><i class="bi bi-speedometer2"></i> Boshqaruv paneli</a>
+                <a href="rooms.html"><i class="bi bi-door-open"></i> Xonalar</a>
+                <a href="bookings.html" class="active"><i class="bi bi-calendar2-week"></i> Bandlovlar</a>
+                <a href="clients.html"><i class="bi bi-people"></i> Mehmonlar</a>
+                <a href="settings.html"><i class="bi bi-gear"></i> Sozlamalar</a>
+
+                <div class="divider"></div>
+
+                <a href="../index.html"><i class="bi bi-box-arrow-left"></i> Saytga qaytish</a>
+            </nav>
+        </aside>
+
+        <!-- ===================== MAIN ===================== -->
+        <div class="admin-main">
+
+            <header class="admin-topbar">
+                <div class="d-flex align-items-center gap-3">
+                    <label for="sidebarToggle" class="btn btn-outline-secondary d-lg-none sidebar-toggle-label mb-0">
+                        <i class="bi bi-list"></i>
+                    </label>
+                    <div>
+                        <h1>Bandlovlar kalendari</h1>
+                        <div class="date">Xonalar bo'yicha bandlik jadvali</div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-person-circle fs-3 text-secondary"></i>
+                    <div>
+                        <div class="fw-bold small">Bexruz Aliyev</div>
+                        <div class="text-secondary" style="font-size:.78rem;">Administrator</div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="admin-content">
+
+                <div class="panel-card">
+
+                    <div class="calendar-toolbar">
+                        <div class="month-nav">
+                            <button type="button" class="btn btn-outline-secondary" disabled
+                                aria-label="Oldingi oy"><i class="bi bi-chevron-left"></i></button>
+                            <span>Avgust 2026</span>
+                            <button type="button" class="btn btn-outline-secondary" disabled
+                                aria-label="Keyingi oy"><i class="bi bi-chevron-right"></i></button>
+                        </div>
+                        <div class="legend mb-0">
+                            <span><span class="dot dot-available"></span>Bo'sh</span>
+                            <span><span class="dot dot-booked"></span>Band</span>
+                            <span><span class="dot dot-maintenance"></span>Ta'mirlanmoqda</span>
+                        </div>
+                    </div>
+
+                    <div class="calendar-scroll">
+                        <table class="calendar-table">
+                            <thead>
+                                <tr class="cal-weekday-row">
+                                    <th class="room-col"></th>
+                                    <th class="cal-day weekend">Sh</th>
+                                    <th class="cal-day weekend">Ya</th>
+                                    <th class="cal-day">Du</th>
+                                    <th class="cal-day">Se</th>
+                                    <th class="cal-day">Ch</th>
+                                    <th class="cal-day">Pa</th>
+                                    <th class="cal-day">Ju</th>
+                                    <th class="cal-day weekend">Sh</th>
+                                    <th class="cal-day weekend">Ya</th>
+                                    <th class="cal-day">Du</th>
+                                    <th class="cal-day today">Se</th>
+                                    <th class="cal-day">Ch</th>
+                                    <th class="cal-day">Pa</th>
+                                    <th class="cal-day">Ju</th>
+                                    <th class="cal-day weekend">Sh</th>
+                                    <th class="cal-day weekend">Ya</th>
+                                    <th class="cal-day">Du</th>
+                                    <th class="cal-day">Se</th>
+                                    <th class="cal-day">Ch</th>
+                                    <th class="cal-day">Pa</th>
+                                    <th class="cal-day">Ju</th>
+                                    <th class="cal-day weekend">Sh</th>
+                                    <th class="cal-day weekend">Ya</th>
+                                    <th class="cal-day">Du</th>
+                                    <th class="cal-day">Se</th>
+                                    <th class="cal-day">Ch</th>
+                                    <th class="cal-day">Pa</th>
+                                    <th class="cal-day">Ju</th>
+                                    <th class="cal-day weekend">Sh</th>
+                                    <th class="cal-day weekend">Ya</th>
+                                    <th class="cal-day">Du</th>
+                                </tr>
+                                <tr class="cal-daynum-row">
+                                    <th class="room-col">Xona</th>
+                                    <th class="cal-day weekend">1</th>
+                                    <th class="cal-day weekend">2</th>
+                                    <th class="cal-day">3</th>
+                                    <th class="cal-day">4</th>
+                                    <th class="cal-day">5</th>
+                                    <th class="cal-day">6</th>
+                                    <th class="cal-day">7</th>
+                                    <th class="cal-day weekend">8</th>
+                                    <th class="cal-day weekend">9</th>
+                                    <th class="cal-day">10</th>
+                                    <th class="cal-day today">11</th>
+                                    <th class="cal-day">12</th>
+                                    <th class="cal-day">13</th>
+                                    <th class="cal-day">14</th>
+                                    <th class="cal-day weekend">15</th>
+                                    <th class="cal-day weekend">16</th>
+                                    <th class="cal-day">17</th>
+                                    <th class="cal-day">18</th>
+                                    <th class="cal-day">19</th>
+                                    <th class="cal-day">20</th>
+                                    <th class="cal-day">21</th>
+                                    <th class="cal-day weekend">22</th>
+                                    <th class="cal-day weekend">23</th>
+                                    <th class="cal-day">24</th>
+                                    <th class="cal-day">25</th>
+                                    <th class="cal-day">26</th>
+                                    <th class="cal-day">27</th>
+                                    <th class="cal-day">28</th>
+                                    <th class="cal-day weekend">29</th>
+                                    <th class="cal-day weekend">30</th>
+                                    <th class="cal-day">31</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">101<span>Standart</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-booked" colspan="5" title="Aziz Karimov (9-13 avgust)"><span>Aziz
+                                            Karimov</span></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">102<span>Standart</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available today"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">103<span>Delux</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-booked" colspan="6" title="Malika Yusupova (10-15 avgust)"><span>Malika
+                                            Yusupova</span></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">104<span>Delux</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available today"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">201<span>Suite</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-booked" colspan="8" title="Jasur Toshpo'latov (5-12 avgust)"><span>Jasur
+                                            Toshpo'latov</span></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">202<span>Suite</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available today"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">203<span>Villa</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-booked" colspan="8" title="Nodira Rashidova (11-18 avgust)"><span>Nodira
+                                            Rashidova</span></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">204<span>Villa</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available today"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">301<span>Premium Suite</span></div>
+                                    </td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-booked" colspan="7" title="John Smith (8-14 avgust)"><span>John
+                                            Smith</span></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">302<span>Premium Suite</span></div>
+                                    </td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available today"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">303<span>Standart</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-maintenance" colspan="7" title="Ta'mirda (10-16 avgust)"><span>Ta'mirda</span>
+                                    </td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                                <tr>
+                                    <td class="room-col"><div class="room-label">304<span>Delux</span></div></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-booked" colspan="8" title="Olga Petrova (9-16 avgust)"><span>Olga
+                                            Petrova</span></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available weekend"></td>
+                                    <td class="cell-available"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="text-secondary small mt-3 mb-0">
+                        <i class="bi bi-info-circle me-1"></i>
+                        Rangli katak — mehmon nomi va turgan kunlari. Ustiga sichqonchani olib borsangiz, to'liq
+                        sana oralig'i ko'rinadi.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
