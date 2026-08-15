@@ -54,27 +54,26 @@ a {
    Navbar
    ========================================================= */
 
-.custom-navbar {
-    background: rgba(17, 17, 17, 0.55);
-    backdrop-filter: blur(8px);
-    padding-top: 14px;
-    padding-bottom: 14px;
-    transition: background-color .2s ease;
-}
 
 .custom-navbar .navbar-brand {
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
 
 .custom-navbar .nav-link {
-    color: #eee;
+    color: #efebeb;
     font-weight: 600;
-    margin: 0 6px;
 }
 
 .custom-navbar .nav-link:hover,
 .custom-navbar .nav-link:focus {
     color: var(--gold);
+}
+
+.nav-rasm {
+    position: fixed;
+    z-index: 2;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 /* =========================================================
@@ -367,3 +366,20 @@ footer.site-footer .footer-bottom {
     font-size: 14px;
     color: #999;
 }
+
+@media only screen and (max-width: 1007px) {
+    .nav-rasm {
+        display: none;
+    }
+
+    .bgr {
+        display: none;
+    }
+
+    .container-fluid {
+        margin-top: -8px;
+        backdrop-filter: blur(80px);
+
+    }
+}
+
