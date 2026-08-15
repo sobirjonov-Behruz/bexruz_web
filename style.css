@@ -379,7 +379,9 @@ footer.site-footer .footer-bottom {
     .container-fluid {
         margin-top: -8px;
         backdrop-filter: blur(80px);
-
+    }
+    .navbar-brand{
+        margin-right: -100px;
     }
 }
 
